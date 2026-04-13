@@ -3,142 +3,226 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy - campuslog</title>
+<title>Privacy Policy — campuslog</title>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f4f6f9; color: #1a1a2e; }
-  header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 2.5rem 2rem 2rem; text-align: center; }
-  header img { width: 72px; height: 72px; border-radius: 18px; margin-bottom: 1rem; border: 3px solid rgba(255,255,255,0.2); }
-  header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.3rem; }
-  header p { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-  .badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 14px; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-top: 0.8rem; }
-  .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-  .card { background: white; border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #e8ecf0; }
-  .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #f0f2f5; }
-  .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-  .icon-blue { background: #e8f0fe; }
-  .icon-green { background: #e6f4ea; }
-  .icon-orange { background: #fef3e2; }
-  .icon-purple { background: #f3e8fd; }
-  .icon-red { background: #fce8e6; }
-  .icon-teal { background: #e0f5f1; }
-  h2 { font-size: 1rem; font-weight: 600; color: #1a1a2e; }
-  p { font-size: 0.9rem; line-height: 1.7; color: #444; margin-bottom: 0.75rem; }
-  p:last-child { margin-bottom: 0; }
-  ul { padding-left: 1.2rem; }
-  ul li { font-size: 0.9rem; line-height: 1.7; color: #444; margin-bottom: 0.3rem; }
-  .highlight { background: #f0f7ff; border-left: 3px solid #4285f4; border-radius: 0 8px 8px 0; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.88rem; color: #1a73e8; }
-  .third-party-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 0.75rem; }
-  .third-party-item { background: #f8f9fc; border: 1px solid #e8ecf0; border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1a1a2e; font-size: 0.85rem; font-weight: 500; }
-  .third-party-dot { width: 8px; height: 8px; border-radius: 50%; background: #4285f4; flex-shrink: 0; }
-  .contact-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 14px; padding: 1.75rem; text-align: center; color: white; margin-top: 1.5rem; }
-  .contact-box p { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
-  .contact-box a { color: #7eb8ff; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-  .footer { text-align: center; margin-top: 2rem; font-size: 0.78rem; color: #999; }
-  .effective { text-align: center; margin: 1.5rem 0 0.5rem; font-size: 0.82rem; color: #999; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Roboto', sans-serif; background: #f8f9fa; color: #202124; font-size: 14px; line-height: 1.6; }
+  header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 32px 24px 28px; text-align: center; }
+  header img { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 0 auto 16px; }
+  header h1 { font-family: 'Google Sans', sans-serif; font-size: 22px; font-weight: 500; color: #202124; margin-bottom: 4px; }
+  header .subtitle { font-size: 13px; color: #5f6368; }
+  header .meta { margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; background: #e8f0fe; color: #1a73e8; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px; }
+  header .meta .material-icons { font-size: 14px; }
+  .wrapper { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  .section { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  .section-header { display: flex; align-items: center; gap: 14px; padding: 18px 20px 16px; border-bottom: 1px solid #f1f3f4; }
+  .section-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-icon .material-icons { font-size: 20px; }
+  .icon-blue { background: #e8f0fe; color: #1a73e8; }
+  .icon-green { background: #e6f4ea; color: #137333; }
+  .icon-amber { background: #fef7e0; color: #b06000; }
+  .icon-red { background: #fce8e6; color: #c5221f; }
+  .icon-purple { background: #f3e8fd; color: #7b1fa2; }
+  .icon-teal { background: #e0f5f1; color: #00796b; }
+  .icon-gray { background: #f1f3f4; color: #5f6368; }
+  .section-title { font-family: 'Google Sans', sans-serif; font-size: 15px; font-weight: 500; color: #202124; }
+  .section-body { padding: 16px 20px 20px; }
+  .section-body p { font-size: 14px; color: #3c4043; line-height: 1.7; margin-bottom: 10px; }
+  .section-body p:last-child { margin-bottom: 0; }
+  .section-body ul { padding-left: 0; list-style: none; }
+  .section-body ul li { font-size: 14px; color: #3c4043; line-height: 1.7; padding: 6px 0 6px 24px; position: relative; border-bottom: 1px solid #f8f9fa; }
+  .section-body ul li:last-child { border-bottom: none; }
+  .section-body ul li::before { content: ''; position: absolute; left: 8px; top: 14px; width: 5px; height: 5px; border-radius: 50%; background: #dadce0; }
+  .notice { background: #f8f9fa; border-left: 3px solid #1a73e8; border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 12px 0; font-size: 13px; color: #3c4043; }
+  .notice:last-child { margin-bottom: 0; }
+  .third-party-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-top: 12px; }
+  .third-party-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; text-decoration: none; color: #202124; font-size: 13px; font-weight: 500; transition: background 0.15s, border-color 0.15s; }
+  .third-party-item:hover { background: #e8f0fe; border-color: #1a73e8; color: #1a73e8; }
+  .third-party-item .material-icons { font-size: 15px; color: #5f6368; flex-shrink: 0; }
+  .third-party-item:hover .material-icons { color: #1a73e8; }
+  .contact-section { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 28px 20px; text-align: center; margin-top: 24px; }
+  .contact-section .material-icons.big { font-size: 32px; color: #1a73e8; display: block; margin-bottom: 10px; }
+  .contact-section h3 { font-family: 'Google Sans', sans-serif; font-size: 15px; font-weight: 500; color: #202124; margin-bottom: 6px; }
+  .contact-section p { font-size: 13px; color: #5f6368; margin-bottom: 16px; }
+  .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: #1a73e8; color: #fff; font-family: 'Google Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 10px 24px; border-radius: 4px; text-decoration: none; }
+  .contact-btn .material-icons { font-size: 16px; }
+  .footer { text-align: center; margin-top: 32px; font-size: 12px; color: #9aa0a6; line-height: 2; }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/starlitboy/privacy-policy/main/ic_launcher_round.png" alt="campuslog logo">
+  <img src="https://raw.githubusercontent.com/starlitboy/privacy-policy/main/ic_launcher_round.png" alt="campuslog app icon">
   <h1>campuslog</h1>
-  <p>School RFID Attendance &amp; Chat System</p>
-  <div class="badge">Privacy Policy</div>
+  <p class="subtitle">School RFID Attendance &amp; Chat System &mdash; by Ritabrata Biswas</p>
+  <div class="meta">
+    <span class="material-icons">verified_user</span>
+    Privacy Policy
+  </div>
 </header>
 
-<div class="container">
+<div class="wrapper">
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-blue">📋</div><h2>Overview</h2></div>
-    <p>This privacy policy applies to the <strong>campuslog</strong> app for mobile devices, created by <strong>Ritabrata Biswas</strong> as an Ad Supported service. This service is intended for use "AS IS".</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><div class="icon icon-blue">📊</div><h2>Information we collect</h2></div>
-    <ul>
-      <li>Your device's Internet Protocol (IP) address</li>
-      <li>Your <strong>phone number</strong>, collected via Firebase Authentication for user verification and login only</li>
-      <li>Pages visited within the app, time and date of visits</li>
-      <li>Time spent on the application</li>
-      <li>Operating system of your mobile device</li>
-    </ul>
-    <div class="highlight">We do not gather precise location data from your mobile device.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><div class="icon icon-orange">📷</div><h2>Camera permission</h2></div>
-    <p>The app requests access to your device camera <strong>solely for scanning RFID/QR codes</strong> to record student attendance.</p>
-    <div class="highlight">No images or videos are ever captured, stored, or shared. The camera is only active during the scanning process.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><div class="icon icon-purple">🔔</div><h2>Push notifications</h2></div>
-    <p>The app sends push notifications to inform users about attendance updates and chat messages. These are essential to the core functionality of the system.</p>
-    <p>You can disable notifications at any time through your device settings.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><div class="icon icon-green">💬</div><h2>Chat system &amp; encryption</h2></div>
-    <p>campuslog includes an in-app chat system for school communication. <strong>All chat messages are encrypted</strong> to ensure the privacy and security of all school communications.</p>
-    <p>Chat data is only accessible to authorized users within the school system.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><div class="icon icon-teal">🔗</div><h2>Third party services</h2></div>
-    <p>The app uses the following third-party services, each with their own privacy policies:</p>
-    <div class="third-party-grid">
-      <a href="https://www.google.com/policies/privacy/" class="third-party-item" target="_blank"><div class="third-party-dot"></div>Google Play Services</a>
-      <a href="https://support.google.com/admob/answer/6128543" class="third-party-item" target="_blank"><div class="third-party-dot"></div>AdMob</a>
-      <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank"><div class="third-party-dot"></div>Firebase Analytics</a>
-      <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank"><div class="third-party-dot"></div>Firebase Crashlytics</a>
-      <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank"><div class="third-party-dot"></div>Firebase Authentication</a>
-      <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank"><div class="third-party-dot"></div>Firebase Cloud Messaging</a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-gray"><span class="material-icons">info</span></div>
+      <div class="section-title">About this policy</div>
+    </div>
+    <div class="section-body">
+      <p>This privacy policy applies to the <strong>campuslog</strong> mobile application, created by Ritabrata Biswas as an ad-supported service. This service is provided "AS IS". By using the application, you consent to the data practices described in this policy.</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-red">🛡️</div><h2>Data disclosure</h2></div>
-    <p>We may disclose your information only when:</p>
-    <ul>
-      <li>Required by law or legal process</li>
-      <li>Necessary to protect rights, safety, or investigate fraud</li>
-      <li>Shared with trusted service providers bound by this policy</li>
-    </ul>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-blue"><span class="material-icons">manage_accounts</span></div>
+      <div class="section-title">Information we collect</div>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>Device IP address</li>
+        <li>Phone number &mdash; collected via Firebase Authentication solely for account verification and secure login</li>
+        <li>App usage data including pages visited, session duration, and timestamps</li>
+        <li>Device operating system information</li>
+      </ul>
+      <div class="notice">This application does not collect precise geographic location data from your device.</div>
+      <div class="notice">This application does not use Artificial Intelligence (AI) technologies to process your personal data.</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-green">🚪</div><h2>Opt-out rights</h2></div>
-    <p>You can stop all data collection by uninstalling the app using the standard uninstall process on your mobile device or via the Google Play Store.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-amber"><span class="material-icons">photo_camera</span></div>
+      <div class="section-title">Camera permission</div>
+    </div>
+    <div class="section-body">
+      <p>The application requests access to your device camera exclusively for scanning RFID and QR codes to record student attendance. The camera is activated only during the active scanning process.</p>
+      <div class="notice">No images, photographs, or video are captured, stored, transmitted, or shared at any time.</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-blue">🗂️</div><h2>Data retention</h2></div>
-    <p>We retain your data for as long as you use the app and for a reasonable time after. To request deletion of your data, contact us at <strong>work.dev.rik@gmail.com</strong>.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-blue"><span class="material-icons">notifications</span></div>
+      <div class="section-title">Push notifications</div>
+    </div>
+    <div class="section-body">
+      <p>The application uses Firebase Cloud Messaging to send push notifications related to attendance records and in-app chat messages. Notifications are integral to the core functionality of this system.</p>
+      <p>You may disable notifications at any time through your device settings without affecting other application functionality.</p>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-orange">👶</div><h2>Children's privacy</h2></div>
-    <p>This app does not knowingly collect data from children under the age of 13. If we discover that a child under 13 has provided personal information, it will be immediately deleted. Parents or guardians may contact us at <strong>work.dev.rik@gmail.com</strong>.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-green"><span class="material-icons">lock</span></div>
+      <div class="section-title">Chat system &amp; encryption</div>
+    </div>
+    <div class="section-body">
+      <p>The application includes an in-app messaging system to facilitate communication within the school. All chat messages are encrypted in transit and at rest to protect user privacy.</p>
+      <div class="notice">Chat data is accessible only to authenticated and authorized users within the school system and is not shared with or accessible by any third parties.</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-green">🔒</div><h2>Security</h2></div>
-    <p>We provide physical, electronic, and procedural safeguards to protect your information. All in-app chat messages are encrypted to protect user privacy.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-teal"><span class="material-icons">link</span></div>
+      <div class="section-title">Third-party services</div>
+    </div>
+    <div class="section-body">
+      <p>The application integrates the following third-party services. Each provider operates under its own privacy policy, linked below.</p>
+      <div class="third-party-list">
+        <a href="https://www.google.com/policies/privacy/" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Google Play Services</a>
+        <a href="https://support.google.com/admob/answer/6128543" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>AdMob</a>
+        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Analytics</a>
+        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Crashlytics</a>
+        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Authentication</a>
+        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Cloud Messaging</a>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><div class="icon icon-purple">🔄</div><h2>Changes to this policy</h2></div>
-    <p>This policy may be updated from time to time. We will notify you by updating this page. Continued use of the app is deemed acceptance of any changes.</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-red"><span class="material-icons">policy</span></div>
+      <div class="section-title">Disclosure of information</div>
+    </div>
+    <div class="section-body">
+      <p>User data may be disclosed only under the following circumstances:</p>
+      <ul>
+        <li>When required by applicable law, court order, or legal process</li>
+        <li>When necessary to protect the rights, safety, or property of users or the public</li>
+        <li>To trusted service providers acting on our behalf, who are contractually bound by confidentiality obligations</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="contact-box">
-    <p style="margin-bottom:0.5rem;">Questions about your privacy?</p>
-    <a href="mailto:work.dev.rik@gmail.com">work.dev.rik@gmail.com</a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-gray"><span class="material-icons">exit_to_app</span></div>
+      <div class="section-title">Opt-out rights</div>
+    </div>
+    <div class="section-body">
+      <p>You may discontinue all data collection at any time by uninstalling the application using the standard process available on your mobile device or through the Google Play Store.</p>
+    </div>
   </div>
 
-  <p class="effective">Effective date: April 13, 2026</p>
-  <p class="footer">Privacy policy for campuslog · Ritabrata Biswas</p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-gray"><span class="material-icons">schedule</span></div>
+      <div class="section-title">Data retention</div>
+    </div>
+    <div class="section-body">
+      <p>User-provided data is retained for as long as the application is actively used, and for a reasonable period thereafter. To request deletion of your personal data, contact us at <strong>work.dev.rik@gmail.com</strong>. All requests will be responded to within a reasonable timeframe.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-purple"><span class="material-icons">child_care</span></div>
+      <div class="section-title">Children's privacy</div>
+    </div>
+    <div class="section-body">
+      <p>This application is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13 years of age. If such data is discovered, it will be deleted from our servers immediately.</p>
+      <p>Parents or guardians who believe their child has submitted personal information may contact us at <strong>work.dev.rik@gmail.com</strong>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-green"><span class="material-icons">security</span></div>
+      <div class="section-title">Security</div>
+    </div>
+    <div class="section-body">
+      <p>We implement physical, electronic, and procedural safeguards to protect the information we process and maintain. All in-app communications are encrypted to preserve the confidentiality and integrity of user data.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-gray"><span class="material-icons">update</span></div>
+      <div class="section-title">Changes to this policy</div>
+    </div>
+    <div class="section-body">
+      <p>This Privacy Policy may be revised periodically. Any updates will be reflected by publishing a revised version on this page with a new effective date. Continued use of the application following any changes constitutes acceptance of the updated policy.</p>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <span class="material-icons big">mail_outline</span>
+    <h3>Contact us</h3>
+    <p>For questions or concerns regarding this Privacy Policy or your personal data, please reach out to the Service Provider directly.</p>
+    <a href="mailto:work.dev.rik@gmail.com" class="contact-btn">
+      <span class="material-icons">send</span>
+      work.dev.rik@gmail.com
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>Effective date: 13 April 2026</p>
+    <p>campuslog &middot; Ritabrata Biswas &middot; All rights reserved</p>
+  </div>
 
 </div>
 </body>
