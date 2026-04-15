@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account – CampusLog</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0e1a;--card:#111827;--border:#1e2d45;--accent:#e74c3c;--accent2:#ff6b6b;--text:#e8eaf0;--muted:#7a8599;--green:#2ecc71;--yellow:#f39c12; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Sora',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 20px 60px;}
+  .logo{font-size:1.4rem;font-weight:700;margin-bottom:48px;color:#fff;}
+  .logo span{color:var(--accent2);}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;max-width:640px;width:100%;padding:40px;}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:var(--accent2);font-size:0.72rem;font-family:'JetBrains Mono',monospace;font-weight:500;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;}
+  h1{font-size:1.85rem;font-weight:700;line-height:1.2;margin-bottom:10px;}
+  h1 span{color:var(--accent2);}
+  .subtitle{color:var(--muted);font-size:0.9rem;line-height:1.65;margin-bottom:28px;}
+  .divider{border:none;border-top:1px solid var(--border);margin:26px 0;}
+  .section-title{font-size:0.72rem;font-family:'JetBrains Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  .info-box{background:rgba(243,156,18,0.08);border:1px solid rgba(243,156,18,0.3);border-radius:10px;padding:14px 16px;margin-bottom:24px;font-size:0.87rem;color:#fcd97d;line-height:1.6;}
+  .info-box strong{color:#f5c842;}
+  .steps{display:flex;flex-direction:column;gap:16px;}
+  .step{display:flex;gap:14px;align-items:flex-start;}
+  .step-num{min-width:30px;height:30px;border-radius:50%;background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.35);color:var(--accent2);font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;margin-top:1px;flex-shrink:0;}
+  .step-body{}
+  .step-body p{font-size:0.9rem;line-height:1.6;color:var(--text);}
+  .step-body p strong{color:#fff;}
+  .chip{display:inline-block;background:#0d1422;border:1px solid var(--border);border-radius:5px;padding:2px 9px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:#7dd3fc;}
+  .tag{display:inline-block;font-size:0.72rem;font-family:'JetBrains Mono',monospace;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.3);color:var(--green);padding:2px 8px;border-radius:4px;margin-top:6px;}
+  .tag.warn{background:rgba(243,156,18,0.1);border-color:rgba(243,156,18,0.3);color:var(--yellow);}
+  .data-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px;}
+  .data-item{background:#0d1422;border:1px solid var(--border);border-radius:10px;padding:12px 14px;}
+  .data-label{font-size:0.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+  .data-val{font-size:0.85rem;font-weight:600;}
+  .data-val.deleted{color:var(--accent2);}
+  .data-val.kept{color:var(--yellow);}
+  .data-val.period{color:var(--green);}
+  .cta-box{background:#0d1422;border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;}
+  .cta-box p{font-size:0.85rem;color:var(--muted);line-height:1.5;}
+  .cta-box p strong{color:var(--text);display:block;margin-bottom:2px;}
+  .btn{background:var(--accent);color:#fff;font-size:0.82rem;font-weight:600;font-family:'Sora',sans-serif;padding:10px 20px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;}
+  .footer{margin-top:28px;text-align:center;font-size:0.76rem;color:var(--muted);line-height:1.7;}
+  @media(max-width:500px){.data-grid{grid-template-columns:1fr;}.cta-box{flex-direction:column;align-items:flex-start;}h1{font-size:1.45rem;}.card{padding:26px;}}
+</style>
+</head>
+<body>
+
+<div class="logo">Campus<span>Log</span></div>
+
+<div class="card">
+  <div class="badge">⚠ Account Deletion</div>
+  <h1>Delete Your <span>CampusLog</span> Account</h1>
+  <p class="subtitle">CampusLog is a school-partnered platform. Because your account is linked to your institution, account deletion requires verification from your school principal before we can process the request.</p>
+
+  <div class="info-box">
+    <strong>⚠ Important:</strong> We cannot delete your account based on a student request alone. A signed authorization from your school principal is mandatory. This protects your data from unauthorized deletion requests.
+  </div>
+
+  <p class="section-title">Step-by-step deletion process</p>
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <p><strong>Student sends an email</strong> to <span class="chip">work.dev.rik@gmail.com</span> with the subject line:<br><em>"CampusLog Account Deletion Request – [Your Name]"</em></p>
+        <div class="tag">Include your registered phone number in the email</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <p><strong>Get a permission letter from your Principal.</strong> Download the template below, print it, and have your school principal fill it in, sign it, and stamp it with the official school seal.</p>
+        <div class="tag warn">⚠ Letter must have principal's signature + school stamp</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <p><strong>Attach a scanned copy</strong> of the signed permission letter to your email and send it to <span class="chip">work.dev.rik@gmail.com</span>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <p>We will <strong>verify with your school</strong> and process the deletion within <strong>7 working days</strong>. You'll receive a confirmation email once done.</p>
+        <div class="tag">Confirmation sent to your registered email</div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <p class="section-title">What happens to your data</p>
+  <div class="data-grid">
+    <div class="data-item"><div class="data-label">Profile & Posts</div><div class="data-val deleted">Permanently Deleted</div></div>
+    <div class="data-item"><div class="data-label">Messages & Chats</div><div class="data-val deleted">Permanently Deleted</div></div>
+    <div class="data-item"><div class="data-label">Institutional Records</div><div class="data-val kept">Retained (School)</div></div>
+    <div class="data-item"><div class="data-label">Processing Time</div><div class="data-val period">7 working days</div></div>
+  </div>
+
+  <div class="cta-box">
+    <p><strong>Ready to start?</strong> Email us with your phone number and signed principal letter attached.</p>
+    <a class="btn" href="mailto:work.dev.rik@gmail.com?subject=CampusLog%20Account%20Deletion%20Request">Email Us</a>
+  </div>
+</div>
+
+<div class="footer">
+  CampusLog · Account Deletion Policy · Last updated April 2026<br>
+  This page is provided in compliance with Google Play's account deletion requirements.
+</div>
+
+</body>
+</html>
