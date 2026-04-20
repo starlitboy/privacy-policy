@@ -4,148 +4,514 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — campuslog</title>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 <style>
+  :root {
+    --bg: #f0f2f5;
+    --surface: #ffffff;
+    --border: #e3e8ef;
+    --text-primary: #0f1923;
+    --text-secondary: #4a5568;
+    --text-muted: #8a97a8;
+    --accent: #1a56db;
+    --accent-light: #ebf0ff;
+    --accent-mid: #c7d7ff;
+    --green: #0d7a4e;
+    --green-light: #e6f7f1;
+    --amber: #92520a;
+    --amber-light: #fff4e0;
+    --red: #b91c1c;
+    --red-light: #fef0f0;
+    --purple: #6d28d9;
+    --purple-light: #f3eeff;
+    --teal: #0e7490;
+    --teal-light: #e0f7fa;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Roboto', sans-serif; background: #f8f9fa; color: #202124; font-size: 14px; line-height: 1.6; }
-  header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 32px 24px 28px; text-align: center; }
-  header img { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 0 auto 16px; }
-  header h1 { font-family: 'Google Sans', sans-serif; font-size: 22px; font-weight: 500; color: #202124; margin-bottom: 4px; }
-  header .subtitle { font-size: 13px; color: #5f6368; }
-  header .meta { margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; background: #e8f0fe; color: #1a73e8; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px; }
-  header .meta .material-icons { font-size: 14px; }
-  .wrapper { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-  .section { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
-  .section-header { display: flex; align-items: center; gap: 14px; padding: 18px 20px 16px; border-bottom: 1px solid #f1f3f4; }
-  .section-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .section-icon .material-icons { font-size: 20px; }
-  .icon-blue { background: #e8f0fe; color: #1a73e8; }
-  .icon-green { background: #e6f4ea; color: #137333; }
-  .icon-amber { background: #fef7e0; color: #b06000; }
-  .icon-red { background: #fce8e6; color: #c5221f; }
-  .icon-purple { background: #f3e8fd; color: #7b1fa2; }
-  .icon-teal { background: #e0f5f1; color: #00796b; }
-  .icon-gray { background: #f1f3f4; color: #5f6368; }
-  .section-title { font-family: 'Google Sans', sans-serif; font-size: 15px; font-weight: 500; color: #202124; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* HERO HEADER */
+  header {
+    background: linear-gradient(135deg, #0f1923 0%, #1a2a3f 60%, #1e3a5f 100%);
+    padding: 52px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 110%, rgba(26,86,219,0.28) 0%, transparent 70%);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(26,86,219,0.08);
+    pointer-events: none;
+  }
+  .header-inner { position: relative; z-index: 1; }
+  header img {
+    width: 72px; height: 72px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    border: 2px solid rgba(255,255,255,0.12);
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    margin-bottom: 6px;
+  }
+  header .subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  header .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(26,86,219,0.35);
+    border: 1px solid rgba(26,86,219,0.5);
+    color: #93b4ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+  }
+  header .badge .material-icons-round { font-size: 13px; }
+
+  /* EFFECTIVE DATE STRIP */
+  .date-strip {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  .date-strip strong { color: var(--accent); }
+
+  /* LAYOUT */
+  .wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 32px 16px 72px;
+  }
+
+  /* SECTION CARDS */
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s;
+  }
+  .section:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06); }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px 16px;
+    border-bottom: 1px solid #f5f7fa;
+  }
+  .icon-wrap {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-wrap .material-icons-round { font-size: 19px; }
+  .ic-blue   { background: var(--accent-light); color: var(--accent); }
+  .ic-green  { background: var(--green-light);  color: var(--green); }
+  .ic-amber  { background: var(--amber-light);  color: var(--amber); }
+  .ic-red    { background: var(--red-light);    color: var(--red); }
+  .ic-purple { background: var(--purple-light); color: var(--purple); }
+  .ic-teal   { background: var(--teal-light);   color: var(--teal); }
+  .ic-gray   { background: #f1f3f6;             color: #6b7280; }
+
+  .section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
   .section-body { padding: 16px 20px 20px; }
-  .section-body p { font-size: 14px; color: #3c4043; line-height: 1.7; margin-bottom: 10px; }
+  .section-body p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.75;
+  }
   .section-body p:last-child { margin-bottom: 0; }
-  .section-body ul { padding-left: 0; list-style: none; }
-  .section-body ul li { font-size: 14px; color: #3c4043; line-height: 1.7; padding: 6px 0 6px 24px; position: relative; border-bottom: 1px solid #f8f9fa; }
+
+  /* LIST */
+  .section-body ul { list-style: none; padding: 0; }
+  .section-body ul li {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    padding: 7px 0 7px 22px;
+    position: relative;
+    border-bottom: 1px solid #f5f7fa;
+    line-height: 1.65;
+  }
   .section-body ul li:last-child { border-bottom: none; }
-  .section-body ul li::before { content: ''; position: absolute; left: 8px; top: 14px; width: 5px; height: 5px; border-radius: 50%; background: #dadce0; }
-  .notice { background: #f8f9fa; border-left: 3px solid #1a73e8; border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 12px 0; font-size: 13px; color: #3c4043; }
+  .section-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 6px; top: 15px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent-mid);
+  }
+
+  /* NOTICE BOX */
+  .notice {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #1e3a6e;
+    line-height: 1.6;
+  }
+  .notice .material-icons-round { font-size: 15px; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
   .notice:last-child { margin-bottom: 0; }
-  .third-party-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-top: 12px; }
-  .third-party-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; text-decoration: none; color: #202124; font-size: 13px; font-weight: 500; transition: background 0.15s, border-color 0.15s; }
-  .third-party-item:hover { background: #e8f0fe; border-color: #1a73e8; color: #1a73e8; }
-  .third-party-item .material-icons { font-size: 15px; color: #5f6368; flex-shrink: 0; }
-  .third-party-item:hover .material-icons { color: #1a73e8; }
-  .contact-section { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 28px 20px; text-align: center; margin-top: 24px; }
-  .contact-section .material-icons.big { font-size: 32px; color: #1a73e8; display: block; margin-bottom: 10px; }
-  .contact-section h3 { font-family: 'Google Sans', sans-serif; font-size: 15px; font-weight: 500; color: #202124; margin-bottom: 6px; }
-  .contact-section p { font-size: 13px; color: #5f6368; margin-bottom: 16px; }
-  .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: #1a73e8; color: #fff; font-family: 'Google Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 10px 24px; border-radius: 4px; text-decoration: none; }
-  .contact-btn .material-icons { font-size: 16px; }
-  .footer { text-align: center; margin-top: 32px; font-size: 12px; color: #9aa0a6; line-height: 2; }
+  .notice.green { background: var(--green-light); border-color: var(--green); color: #0a3d27; }
+  .notice.green .material-icons-round { color: var(--green); }
+
+  /* DATA TABLE */
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .data-table th {
+    background: #f5f7fa;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    padding: 9px 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid #f5f7fa;
+    vertical-align: top;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td:first-child { font-weight: 500; color: var(--text-primary); }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .tag-required { background: #fef0f0; color: var(--red); }
+  .tag-optional { background: var(--green-light); color: var(--green); }
+
+  /* THIRD PARTY */
+  .third-party-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .tp-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+  .tp-item:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-mid);
+    color: var(--accent);
+  }
+  .tp-item .material-icons-round { font-size: 14px; color: var(--text-muted); flex-shrink: 0; }
+  .tp-item:hover .material-icons-round { color: var(--accent); }
+
+  /* CONTACT */
+  .contact-box {
+    background: linear-gradient(135deg, #0f1923 0%, #1a2a3f 100%);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-box::before {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(26,86,219,0.15);
+    pointer-events: none;
+  }
+  .contact-box .material-icons-round.big {
+    font-size: 36px;
+    color: #93b4ff;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .contact-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+  .contact-box p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 11px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s;
+    position: relative;
+    z-index: 1;
+  }
+  .contact-btn:hover { background: #1446c0; }
+  .contact-btn .material-icons-round { font-size: 15px; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 2.2;
+  }
+  .footer span { opacity: 0.4; margin: 0 6px; }
+
+  /* DIVIDER LABEL */
+  .section-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 20px 4px 8px;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/starlitboy/privacy-policy/main/ic_launcher_round.png" alt="campuslog app icon">
-  <h1>campuslog</h1>
-  <p class="subtitle">School RFID Attendance &amp; Chat System &mdash; by  Devstudioo</p>
-  <div class="meta">
-    <span class="material-icons">verified_user</span>
-    Privacy Policy
+  <div class="header-inner">
+    <img src="https://raw.githubusercontent.com/starlitboy/privacy-policy/main/ic_launcher_round.png" alt="campuslog icon">
+    <h1>campuslog</h1>
+    <p class="subtitle">School RFID Attendance &amp; Chat System &nbsp;·&nbsp; by Devstudioo</p>
+    <div class="badge">
+      <span class="material-icons-round">verified_user</span>
+      Privacy Policy
+    </div>
   </div>
 </header>
 
+<div class="date-strip">
+  Effective date: <strong>April 21, 2026</strong> &nbsp;·&nbsp; Last updated: <strong>April 21, 2026</strong>
+</div>
+
 <div class="wrapper">
 
+  <!-- ABOUT -->
+  <div class="section-label">Overview</div>
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-gray"><span class="material-icons">info</span></div>
+      <div class="icon-wrap ic-gray"><span class="material-icons-round">info</span></div>
       <div class="section-title">About this policy</div>
     </div>
     <div class="section-body">
-      <p>This privacy policy applies to the <strong>campuslog</strong> mobile application, created by Ritabrata Biswas as an ad-supported service. This service is provided "AS IS". By using the application, you consent to the data practices described in this policy.</p>
+      <p>This privacy policy applies to the <strong>campuslog</strong> mobile application, developed by <strong>Ritabrata Biswas</strong> (Devstudioo). This service is provided "AS IS". By using the application, you agree to the data practices described in this policy.</p>
     </div>
   </div>
 
+  <!-- DATA COLLECTED -->
+  <div class="section-label">Data &amp; Permissions</div>
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-blue"><span class="material-icons">manage_accounts</span></div>
+      <div class="icon-wrap ic-blue"><span class="material-icons-round">manage_accounts</span></div>
       <div class="section-title">Information we collect</div>
     </div>
     <div class="section-body">
-      <ul>
-        <li>Device IP address</li>
-        <li>Phone number &mdash; collected via Firebase Authentication solely for account verification and secure login</li>
-        <li>App usage data including pages visited, session duration, and timestamps</li>
-        <li>Device operating system information</li>
-      </ul>
-      <div class="notice">This application does not collect precise geographic location data from your device.</div>
-      <div class="notice">This application does not use Artificial Intelligence (AI) technologies to process your personal data.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon icon-amber"><span class="material-icons">photo_camera</span></div>
-      <div class="section-title">Camera permission</div>
-    </div>
-    <div class="section-body">
-      <p>The application requests access to your device camera exclusively for scanning RFID and QR codes to record student attendance. The camera is activated only during the active scanning process.</p>
-      <div class="notice">No images, photographs, or video are captured, stored, transmitted, or shared at any time.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon icon-blue"><span class="material-icons">notifications</span></div>
-      <div class="section-title">Push notifications</div>
-    </div>
-    <div class="section-body">
-      <p>The application uses Firebase Cloud Messaging to send push notifications related to attendance records and in-app chat messages. Notifications are integral to the core functionality of this system.</p>
-      <p>You may disable notifications at any time through your device settings without affecting other application functionality.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon icon-green"><span class="material-icons">lock</span></div>
-      <div class="section-title">Chat system &amp; encryption</div>
-    </div>
-    <div class="section-body">
-      <p>The application includes an in-app messaging system to facilitate communication within the school. All chat messages are encrypted in transit and at rest to protect user privacy.</p>
-      <div class="notice">Chat data is accessible only to authenticated and authorized users within the school system and is not shared with or accessible by any third parties.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon icon-teal"><span class="material-icons">link</span></div>
-      <div class="section-title">Third-party services</div>
-    </div>
-    <div class="section-body">
-      <p>The application integrates the following third-party services. Each provider operates under its own privacy policy, linked below.</p>
-      <div class="third-party-list">
-        <a href="https://www.google.com/policies/privacy/" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Google Play Services</a>
-        <a href="https://support.google.com/admob/answer/6128543" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>AdMob</a>
-        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Analytics</a>
-        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Crashlytics</a>
-        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Authentication</a>
-        <a href="https://firebase.google.com/support/privacy" class="third-party-item" target="_blank" rel="noopener"><span class="material-icons">open_in_new</span>Firebase Cloud Messaging</a>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data type</th>
+            <th>Purpose</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phone number</td>
+            <td>Firebase Authentication — account verification &amp; secure login</td>
+            <td><span class="tag tag-required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Chat messages</td>
+            <td>In-app messaging between authenticated school users</td>
+            <td><span class="tag tag-required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Device IP address</td>
+            <td>Security, fraud prevention, server communication</td>
+            <td><span class="tag tag-required">Required</span></td>
+          </tr>
+          <tr>
+            <td>App usage data</td>
+            <td>Analytics — pages visited, session duration, timestamps</td>
+            <td><span class="tag tag-required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Device OS info</td>
+            <td>Crash reporting and compatibility via Firebase Crashlytics</td>
+            <td><span class="tag tag-required">Required</span></td>
+          </tr>
+          <tr>
+            <td>Advertising ID</td>
+            <td>Ad targeting and performance via AdMob</td>
+            <td><span class="tag tag-optional">Optional</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="notice" style="margin-top:14px;">
+        <span class="material-icons-round">location_off</span>
+        This application does not collect precise geographic location data from your device.
+      </div>
+      <div class="notice">
+        <span class="material-icons-round">smart_toy</span>
+        This application does not use Artificial Intelligence (AI) to process your personal data.
       </div>
     </div>
   </div>
 
+  <!-- CAMERA -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-red"><span class="material-icons">policy</span></div>
+      <div class="icon-wrap ic-amber"><span class="material-icons-round">photo_camera</span></div>
+      <div class="section-title">Camera permission</div>
+    </div>
+    <div class="section-body">
+      <p>The app requests camera access exclusively for scanning RFID and QR codes to record student attendance. The camera is only activated during an active scan session.</p>
+      <div class="notice green">
+        <span class="material-icons-round">check_circle</span>
+        No images, photographs, or video are ever captured, stored, transmitted, or shared.
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATIONS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-wrap ic-blue"><span class="material-icons-round">notifications</span></div>
+      <div class="section-title">Push notifications</div>
+    </div>
+    <div class="section-body">
+      <p>Firebase Cloud Messaging is used to send push notifications related to attendance records and incoming chat messages. Notifications are integral to core functionality.</p>
+      <p>You may disable notifications at any time through your device settings without affecting other app functionality.</p>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-wrap ic-green"><span class="material-icons-round">lock</span></div>
+      <div class="section-title">Chat system &amp; encryption</div>
+    </div>
+    <div class="section-body">
+      <p>campuslog includes an in-app messaging system for communication within the school. All chat messages are <strong>encrypted in transit and at rest</strong> to protect user privacy.</p>
+      <p>Messages are stored on our servers to enable conversation history and are retained for the duration of the user's account activity.</p>
+      <div class="notice green">
+        <span class="material-icons-round">group</span>
+        Chat data is accessible only to authenticated and authorized users within the school system and is never shared with or accessible by any third parties.
+      </div>
+    </div>
+  </div>
+
+  <!-- THIRD PARTY -->
+  <div class="section-label">Third Parties</div>
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-wrap ic-teal"><span class="material-icons-round">link</span></div>
+      <div class="section-title">Third-party services</div>
+    </div>
+    <div class="section-body">
+      <p>The application integrates the following third-party services. Each operates under its own privacy policy.</p>
+      <div class="third-party-grid">
+        <a href="https://www.google.com/policies/privacy/" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>Google Play Services</a>
+        <a href="https://support.google.com/admob/answer/6128543" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>AdMob</a>
+        <a href="https://firebase.google.com/support/privacy" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>Firebase Analytics</a>
+        <a href="https://firebase.google.com/support/privacy" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>Firebase Crashlytics</a>
+        <a href="https://firebase.google.com/support/privacy" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>Firebase Authentication</a>
+        <a href="https://firebase.google.com/support/privacy" class="tp-item" target="_blank" rel="noopener"><span class="material-icons-round">open_in_new</span>Firebase Cloud Messaging</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLOSURE -->
+  <div class="section-label">Legal</div>
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-wrap ic-red"><span class="material-icons-round">policy</span></div>
       <div class="section-title">Disclosure of information</div>
     </div>
     <div class="section-body">
@@ -153,75 +519,81 @@
       <ul>
         <li>When required by applicable law, court order, or legal process</li>
         <li>When necessary to protect the rights, safety, or property of users or the public</li>
-        <li>To trusted service providers acting on our behalf, who are contractually bound by confidentiality obligations</li>
+        <li>To trusted service providers acting on our behalf, bound by confidentiality obligations</li>
       </ul>
     </div>
   </div>
 
+  <!-- OPT OUT -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-gray"><span class="material-icons">exit_to_app</span></div>
+      <div class="icon-wrap ic-gray"><span class="material-icons-round">exit_to_app</span></div>
       <div class="section-title">Opt-out rights</div>
     </div>
     <div class="section-body">
-      <p>You may discontinue all data collection at any time by uninstalling the application using the standard process available on your mobile device or through the Google Play Store.</p>
+      <p>You may stop all data collection by uninstalling the app using the standard uninstall process on your device or via the Google Play Store.</p>
     </div>
   </div>
 
+  <!-- RETENTION -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-gray"><span class="material-icons">schedule</span></div>
-      <div class="section-title">Data retention</div>
+      <div class="icon-wrap ic-gray"><span class="material-icons-round">schedule</span></div>
+      <div class="section-title">Data retention &amp; deletion</div>
     </div>
     <div class="section-body">
-      <p>User-provided data is retained for as long as the application is actively used, and for a reasonable period thereafter. To request deletion of your personal data, contact us at <strong>work.dev.rik@gmail.com</strong>. All requests will be responded to within a reasonable timeframe.</p>
+      <p>User data — including chat messages — is retained for as long as the account is active, and for a reasonable period thereafter. To request deletion of your personal data, contact us at <strong>work.dev.rik@gmail.com</strong>. All deletion requests will be fulfilled within a reasonable timeframe.</p>
     </div>
   </div>
 
+  <!-- CHILDREN -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-purple"><span class="material-icons">child_care</span></div>
+      <div class="icon-wrap ic-purple"><span class="material-icons-round">child_care</span></div>
       <div class="section-title">Children's privacy</div>
     </div>
     <div class="section-body">
-      <p>This application is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13 years of age. If such data is discovered, it will be deleted from our servers immediately.</p>
+      <p>This application is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If such data is discovered, it will be deleted from our servers immediately.</p>
       <p>Parents or guardians who believe their child has submitted personal information may contact us at <strong>work.dev.rik@gmail.com</strong>.</p>
     </div>
   </div>
 
+  <!-- SECURITY -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-green"><span class="material-icons">security</span></div>
+      <div class="icon-wrap ic-green"><span class="material-icons-round">security</span></div>
       <div class="section-title">Security</div>
     </div>
     <div class="section-body">
-      <p>We implement physical, electronic, and procedural safeguards to protect the information we process and maintain. All in-app communications are encrypted to preserve the confidentiality and integrity of user data.</p>
+      <p>We implement physical, electronic, and procedural safeguards to protect the information we process. All in-app communications — including chat — are encrypted to preserve the confidentiality and integrity of user data.</p>
     </div>
   </div>
 
+  <!-- CHANGES -->
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-gray"><span class="material-icons">update</span></div>
+      <div class="icon-wrap ic-gray"><span class="material-icons-round">update</span></div>
       <div class="section-title">Changes to this policy</div>
     </div>
     <div class="section-body">
-      <p>This Privacy Policy may be revised periodically. Any updates will be reflected by publishing a revised version on this page with a new effective date. Continued use of the application following any changes constitutes acceptance of the updated policy.</p>
+      <p>This Privacy Policy may be revised periodically. Updates will be reflected on this page with a new effective date. Continued use of the application following any changes constitutes acceptance of the updated policy.</p>
     </div>
   </div>
 
-  <div class="contact-section">
-    <span class="material-icons big">mail_outline</span>
+  <!-- CONTACT -->
+  <div class="contact-box">
+    <span class="material-icons-round big">mail_outline</span>
     <h3>Contact us</h3>
-    <p>For questions or concerns regarding this Privacy Policy or your personal data, please reach out to the Service Provider directly.</p>
+    <p>For questions or concerns about this Privacy Policy or your personal data, contact the developer directly.</p>
     <a href="mailto:work.dev.rik@gmail.com" class="contact-btn">
-      <span class="material-icons">send</span>
+      <span class="material-icons-round">send</span>
       work.dev.rik@gmail.com
     </a>
   </div>
 
   <div class="footer">
-    <p>Effective date: 13 April 2026</p>
-    <p>campuslog &middot; Ritabrata Biswas &middot; All rights reserved</p>
+    <p>Effective date: April 21, 2026</p>
+    <p>campuslog <span>·</span> Ritabrata Biswas (Devstudioo) <span>·</span> All rights reserved</p>
   </div>
 
 </div>
